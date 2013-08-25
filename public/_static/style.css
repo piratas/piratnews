@@ -1,0 +1,11 @@
+body {
+ 	font-size: 12px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", "sans-serif";
+	line-height: 1.5em;
+}
+
+
+header.header {
+	background-color: #ffffff;
+	margin-bottom: 20px;
+}
