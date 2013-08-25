@@ -35,7 +35,7 @@ nosetests.xml
 .pydevproject
 
 #deploy
-deploy
 fabfile.py
 
 *.db
+.DS_Store
