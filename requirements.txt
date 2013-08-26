@@ -1,1 +1,2 @@
-opps
+-e git+https://github.com/guilhermebr/opps.git#egg=opps
+django
