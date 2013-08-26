@@ -16,7 +16,8 @@ DATABASES = {
         }
 }
 
-ALLOWED_HOSTS = env.hosts 
+ALLOWED_HOSTS = ['127.0.0.1', '.localhost']
+ALLOWED_HOSTS += %(hosts)s 
 
 SECRET_KEY = '%(secret_key)s'
 
