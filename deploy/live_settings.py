@@ -16,6 +16,11 @@ DATABASES = {
         }
 }
 
+ALLOWED_HOSTS += env.hosts 
+
+SECRET_KEY = '%(secret_key)s'
+
+
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTOCOL", "https")
 
 CACHE_MIDDLEWARE_SECONDS = 60

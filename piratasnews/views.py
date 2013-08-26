@@ -42,6 +42,7 @@ def index(request):
 	context['channels'] = channels
 	context['containers'] = container
 	context['slider'] =  slider
-	context['slide_active'] = slider[0]
+	if slider:
+		context['slide_active'] = slider[0]
 
 	return render(request, template_name, context)

@@ -2,8 +2,10 @@
 # -*- coding: utf-8 -*-
 import os
 
-DEBUG = True
+DEBUG = os.environ.get('DEBUG') == True
 TEMPLATE_DEBUG = DEBUG
+
+ALLOWED_HOSTS = ['127.0.0.1', '.localhost']
 
 PROJECT_PATH = os.path.join(os.path.abspath(os.path.dirname(__file__)), '..')
 
