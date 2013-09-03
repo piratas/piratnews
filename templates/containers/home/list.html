@@ -1,0 +1,47 @@
+{% extends "containers/base.html" %}
+
+{% block content %}
+            
+    <div class="row-fluid">
+        <div class="span8">
+            <div class="main-slider">
+            {% load container_tags %}
+            <section>
+              {% get_containerbox 'slider-home' template_name='containers/include/slider_home.html' %}
+            </section>
+            </div>
+            <section>
+              {% get_all_containerbox template_name='containers/include/channels_home.html' %}
+            </section>
+        </div>
+        <div class="span4">
+         <div class='channel-header'>
+                            <h2>Colunas</h2>
+        </div>
+          <h4>Subheading</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+          <h4>Subheading</h4>
+          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+          <h4>Subheading</h4>
+          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+
+          <div class='channel-header'>
+                <h2>+ Acessadas</h2>
+            </div>
+          <h4>Subheading</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+          <h4>Subheading</h4>
+          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+          <h4>Subheading</h4>
+          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        </div>
+    </div> 
+
+           
+
+{% endblock %}
+

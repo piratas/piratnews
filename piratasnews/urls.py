@@ -9,8 +9,7 @@ urlpatterns = patterns(
     '',
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
-	 url(r'^$', 'piratasnews.views.index', name='home'),
-   	 url(r'^', include('opps.urls')),
+   	url(r'^', include('opps.urls')),
 
 )
 

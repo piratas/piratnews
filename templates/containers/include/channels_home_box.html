@@ -1,0 +1,41 @@
+    <div>
+        <div class='channel-header' > 
+            <h2>{{ box.title }}</h2>
+        </div>
+        <div class='posts'>
+            <ul class="thumbnails">
+                {% if not box.queryset %}
+                    {% for post in box.ordered_containers %}
+                        <li class='post'>
+                            <div class='thumbnail'>
+                                <a href="{% url 'containers:open' post.channel.long_slug post.slug %}" ><img class='post_thumb' src="{{ post.get_thumb.get_absolute_url }}"></a>
+                            </div>
+                            <div class="caption">
+                                <p class='post-hat'>
+                                  <a href="{% url 'containers:open' post.channel.long_slug post.slug %}" alt="{{ post.short_title }}">{{ post.hat }}</a>
+                                </p>
+                                <p class='post-title'><a href="{% url 'containers:open' post.channel.long_slug post.slug %}">{{ post.title }}</a></p>
+                            </div>
+                        </li>               
+                    {% endfor %}
+                {% else %}
+
+                   {% for post in  box.queryset.get_queryset %}
+
+                    <li class='post'>
+                        <div class='thumbnail'>
+                            <a href="{% url 'containers:open' post.channel.long_slug post.slug %}" ><img class='post_thumb' src="{{ post.get_thumb.get_absolute_url }}"></a>
+                        </div>
+                            <div class="caption">
+                                <p class='post-hat'>
+                                  <a href="{% url 'containers:open' post.channel.long_slug post.slug %}" alt="{{ post.short_title }}">{{ post.hat }}</a>
+                                </p>
+                                <p class='post-title'><a href="{% url 'containers:open' post.channel.long_slug post.slug %}">{{ post.title }}</a></p>
+                            </div>
+                        </li>             
+                    {% endfor %}
+
+                {% endif %}
+            </ul>
+        </div>
+    </div>

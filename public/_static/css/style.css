@@ -53,13 +53,18 @@ header.header {
 	line-height: 14px;
 
 }
-.posts .post-title a {
-	font-size: 14px;
+.posts .post-hat a {
+	font-size: 16px;
 	color: blue;
 	border-bottom: 0;
 }
 
-.posts .post-headline a {
+.posts .post-title a {
+	font-size: 14px;
+	border-bottom: 0;
+}
+
+.posts .post-title a {
 	font-size: 12px;
 	border-bottom: 0;
 }
@@ -70,7 +75,7 @@ header.header {
 }
 
 .carousel-inner {
-	width: 480px;
+	width: 620px;
 }
 .carousel-caption p > a{
 	border-bottom: 0;
@@ -80,4 +85,17 @@ header.header {
 }
 .carousel-caption h4 > a {
 	color: red;
+}
+
+.carousel-inner > .item > a > img {
+    width: 620px;
+    height: 340px;
+}
+
+.post {
+    height: 280px;
+}
+.post_thumb {
+	width: 300px;
+    height: 207px;
 }
