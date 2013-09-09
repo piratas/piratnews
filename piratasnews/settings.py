@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 import os
 
-DEBUG = os.environ.get('DEBUG') == True
+DEBUG = os.environ.get('DEBUG')
+print os.environ.get('DEBUG')
 TEMPLATE_DEBUG = DEBUG
 
 PROJECT_PATH = os.path.join(os.path.abspath(os.path.dirname(__file__)), '..')
@@ -83,6 +84,7 @@ INSTALLED_APPS = (
     'opps.images',
     'opps.sources',
     'opps.sitemaps',
+    'opps.feedcrawler',
 
     'south',
     'rest_framework',
@@ -91,10 +93,11 @@ INSTALLED_APPS = (
 
 OPPS_CHECK_MOBILE = True
 
-MEDIA_URL = '/media/'
+#MEDIA_URL = '/media/'
+MEDIA_URL = 'http://noticias.codesafe.com.br/media/'
 
-THUMBOR_ENABLED = False
-# THUMBOR_MEDIA_URL = 'http://localhost:8000/media/'
+THUMBOR_ENABLED = True
+THUMBOR_MEDIA_URL = 'http://186.226.87.2:2080/media/'
 
 TEST_RUNNER = 'django_coverage.coverage_runner.CoverageRunner'
 
@@ -130,6 +133,8 @@ LOGGING = {
 }
 
 STATIC_URL = '/static/'
+#STATIC_URL = 'http://noticias.codesafe.com.br/static/'
+
 STATIC_ROOT = os.path.join(PROJECT_PATH, 'public', 'static')
 STATICFILES_DIRS = (os.path.join(PROJECT_PATH, 'public', '_static'),)
 
