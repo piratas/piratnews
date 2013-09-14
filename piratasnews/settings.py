@@ -3,7 +3,6 @@
 import os
 
 DEBUG = os.environ.get('DEBUG')
-print os.environ.get('DEBUG')
 TEMPLATE_DEBUG = DEBUG
 
 PROJECT_PATH = os.path.join(os.path.abspath(os.path.dirname(__file__)), '..')
@@ -82,12 +81,15 @@ INSTALLED_APPS = (
     'opps.channels',
     'opps.flatpages',
     'opps.images',
-    'opps.sources',
     'opps.sitemaps',
+    'opps.contrib.fileupload',
     'opps.feedcrawler',
+
 
     'south',
     'rest_framework',
+
+
 )
 
 
@@ -143,13 +145,6 @@ PATH_TINYMCE = STATIC_URL + "tinymce"
 
 ROOT_URLCONF = 'piratasnews.urls'
 
-##################
-# LOCAL SETTINGS #
-##################
-
-# Allow any settings to be defined in local_settings.py which should be
-# ignored in your version control system allowing for settings to be
-# defined per machine.
 try:
     from local_settings import *
 except ImportError:
