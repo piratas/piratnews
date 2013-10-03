@@ -96,8 +96,8 @@ INSTALLED_APPS = (
 
 OPPS_CHECK_MOBILE = True
 
-#MEDIA_URL = '/media/'
-MEDIA_URL = 'http://noticias.codesafe.com.br/media/'
+MEDIA_URL = '/media/'
+#MEDIA_URL = 'http://noticias.codesafe.com.br/media/'
 
 THUMBOR_ENABLED = True
 THUMBOR_MEDIA_URL = 'http://186.226.87.2:2080/media/'
